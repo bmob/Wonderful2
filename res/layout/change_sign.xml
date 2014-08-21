@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/sign_area_commit"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:padding="8dip"
+	    android:background="@drawable/bg_comment_comment"
+	    >
+
+    <EditText
+        android:id="@+id/sign_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="来说两句吧..."
+        android:background="@drawable/selector_edittext_account"
+        android:ems="10" 
+        android:minHeight="40dp"
+        android:layout_marginRight="4dip"
+        android:layout_marginLeft="4dp"
+        android:paddingLeft="4dip"
+        android:layout_marginTop="16dp"
+        >
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@+id/sign_comment_commit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:minWidth="80dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="提交" 
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/selector_logout"/>
+	</LinearLayout>

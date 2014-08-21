@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.markupartist.android.widget.ActionBar 
+	    android:id="@+id/actionbar_fav"
+	    style="@style/ActionBar"
+	    />
+	<RelativeLayout
+	        android:id="@+id/content_frame_fav"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_below="@id/actionbar_fav"
+	        android:background="@drawable/qq_background" >
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xgr.wonderful"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <!-- bmob permission -->
+  	<uses-permission android:name="android.permission.INTERNET" /><!-- 允许应用打开网络套接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /><!-- 允许应用访问网络上的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+   	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+   	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+   	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+   	<uses-permission android:name="android.permission.READ_LOGS" />
+   	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+   	<uses-permission android:name="android.permission.VIBRATE"/>
+   	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+   	<uses-permission android:name="android.permission.GET_TASKS"/>
+   	<uses-permission android:name="android.permission.REORDER_TASKS"/>
+   	
+   	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+   	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+   	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.xgr.wonderful.MyApplication">
+        <activity
+         	android:name="com.xgr.wonderful.ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xgr.wonderful.ui.MainActivity"
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.RegisterAndLoginActivity"
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.EditActivity"
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"
+            	  android:windowSoftInputMode="adjustPan"
+            	  ></activity>
+        <activity android:name="com.xgr.wonderful.ui.CommentActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.FavActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.PersonalActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.PersonalEditActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="com.xgr.wonderful.ui.SettingsActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+         <activity android:name="com.xgr.wonderful.ui.AboutActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+          <activity android:name="com.xgr.wonderful.ui.EditSignActivity"
+                  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+    	 <!-- umeng feedback -->
+         <activity android:name="com.umeng.fb.ConversationActivity"
+         		  android:theme="@android:style/Theme.NoTitleBar"/>
+         <activity android:name="com.umeng.fb.ContactActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"/>
+         <meta-data android:value="5306c26856240b946c0b82d7" android:name="UMENG_APPKEY"></meta-data>
+         <meta-data android:value="QD_umeng" android:name="UMENG_CHANNEL"/>
+         <meta-data android:name="UMENG_MESSAGE_SECRET" android:value="aa303ab2933220ee2d82cc7ac3575768"/>
+    	 <!-- umeng update -->
+    	 <service
+			       android:name="com.umeng.update.net.DownloadingService"
+			       android:process=":DownloadingService" >
+		 </service>
+		 <activity 
+		    	   android:name="com.umeng.update.UpdateDialogActivity"
+		           android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		 </activity>
+		 <!-- umeng push -->
+		 <receiver
+			    android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+			    android:exported="false" >
+			</receiver>
+			<receiver android:name="com.umeng.message.RegistrationReceiver" >
+			    <intent-filter>
+			        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="android.intent.action.PACKAGE_REMOVED" />
+			
+			        <data android:scheme="package" />
+			    </intent-filter>
+			</receiver>
+			<receiver android:name="com.umeng.message.UmengBroadcastReceiver" >
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.RECEIVE" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="com.xgr.qingqiang.intent.action.COMMAND" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.RE_ELECTION_V2" />
+			    </intent-filter>
+			</receiver>
+			<service
+			    android:name="com.umeng.message.UmengService"
+			    android:exported="true"
+			    android:process=":umengService_v1" >
+			    <intent-filter>
+			        <action android:name="com.xgr.qingqiang.intent.action.START" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="com.xgr.qingqiang.intent.action.COCKROACH" />
+			    </intent-filter>
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.PING" />
+			    </intent-filter>
+			</service>
+			<service
+			    android:name="org.android.agoo.service.ElectionService"
+			    android:exported="true"
+			    android:process=":umengService_v1" >
+			    <intent-filter>
+			        <action android:name="org.agoo.android.intent.action.ELECTION_V2" />
+			    </intent-filter>
+			</service>
+			<service android:name="com.umeng.message.UmengIntentService" />
+		 
+		   <!-- youmi -->
+		   <activity
+			    android:name="net.youmi.android.AdBrowser"
+			    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+			    android:theme="@android:style/Theme.Light.NoTitleBar" >
+			</activity>
+			<service
+			    android:name="net.youmi.android.AdService"
+			    android:exported="false" >
+			</service>
+			<service
+			    android:name="net.youmi.android.ExpService"
+			    android:exported="false" >
+			</service>
+			<receiver
+			    android:name="net.youmi.android.AdReceiver" >
+			    <intent-filter>
+			        <action android:name="android.intent.action.PACKAGE_ADDED" />
+			        <data android:scheme="package" />
+			    </intent-filter>
+			</receiver>
+			<receiver
+			    android:name="net.youmi.android.offers.OffersReceiver"
+			    android:exported="false" >
+			</receiver>
+			<meta-data android:name="YOUMI_CHANNEL"
+    				   android:value="10190" >
+			</meta-data>
+			
+			        <!-- openqq -->
+         <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100548485" />
+ 				<!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+         <!-- MAT -->
+        <!-- 请将value改为MTA分配的appkey < -->
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="Aqc100548485" />
+        <!-- 请将value改为app发布对应的渠道，不同的发布渠道使用不同的名字 < -->
+        <meta-data
+            android:name="InstallChannel"
+            android:value="QD_91" />
+        <!-- 注意：若填写的渠道为纯数字字符串类型，请不要超过int表示的范围！ < -->
+    </application>
+
+</manifest>

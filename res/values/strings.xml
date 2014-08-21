@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wonderful</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="actionbar_activity_not_found">Failed to open intent&#8230;</string>
+    <string name="application_title">Wonderful</string>
+    
+    <string name="settings_title">应用设置</string>
+    
+    <string name="about_title">关于</string>
+    
+    <string-array name="navigations">
+        <item>设置</item>
+        <item>反馈</item>
+        <item>推荐</item>
+        <item>关于</item>
+    </string-array>
+       <string-array name="interpolators">
+        <item>Accelerate</item>
+        <item>Linear</item>
+        <item>AccelerateDecelerate</item>
+        <item>Decelerate</item>
+    </string-array>
+    
+   
+    <string name="dialog_tips">大家好，\n\t\t\t\t\t该应用源码中不提供应用key,如果你需要查看该源码效果，请自行到官网申请key。\n\t\t\t\t\t申请成功之后在应用程序启动页(SplashActivity)的onCreate方法中完成初始化操作!</string>
+</resources>

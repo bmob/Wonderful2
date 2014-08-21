@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navi_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_navi" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="top"
+        android:orientation="vertical" >
+		<TextView
+            android:id="@+id/tv_navi_main"
+            style="@style/navitext"
+            android:drawableLeft="@drawable/ic_navi_home"
+            android:text="主页"
+            android:drawablePadding="8dp"
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/tv_navi_settings"
+            style="@style/navitext"
+            android:drawableLeft="@drawable/ic_navi_settings"
+            android:text="设置"
+            android:drawablePadding="8dp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_navi_feedback"
+            style="@style/navitext"
+            android:drawableLeft="@drawable/ic_navi_feedback"
+            android:text="收藏" 
+            android:drawablePadding="8dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tv_navi_intro"
+            style="@style/navitext"
+            android:drawableLeft="@drawable/ic_navi_intro"
+            android:text="推荐" 
+            android:drawablePadding="8dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tv_navi_about"
+            style="@style/navitext"
+            android:drawableLeft="@drawable/ic_navi_about"
+            android:text="关于"
+            android:drawablePadding="8dp"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

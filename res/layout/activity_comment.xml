@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.markupartist.android.widget.ActionBar
+        android:id="@+id/actionbar_comment"
+        style="@style/ActionBar" />
+	<ScrollView 
+	    android:id="@+id/commit_scroll"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/actionbar_comment"
+	    android:layout_marginBottom="56dp"
+	    >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+    <include
+        android:id="@+id/comment_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/ai_item" />
+    	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="#dddddd"
+	    />
+	<ListView 
+	    android:id="@+id/comment_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    ></ListView>
+
+	<TextView 
+	    android:id="@+id/loadmore"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="加载更多评论"
+	    android:padding="12dip"
+	    android:gravity="center"
+	    style="@style/TextTheme.tipstheme_second"
+	    android:textColor="@drawable/selector_load_more"
+	    />
+    </LinearLayout>
+    </ScrollView>
+	<LinearLayout 
+	    android:id="@+id/area_commit"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    android:padding="4dip"
+	    android:background="@drawable/bg_comment_comment"
+	    android:gravity="center_vertical"
+	    >
+
+    <EditText
+        android:id="@+id/comment_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="来评论一句吧"
+        android:background="@drawable/selector_edittext_account"
+        android:ems="10" 
+        android:minHeight="40dp"
+        android:layout_marginRight="4dip"
+        android:layout_marginLeft="4dp"
+        android:paddingLeft="4dip"
+        >
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@+id/comment_commit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:minWidth="80dp"
+        android:layout_weight="0"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="评论" 
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_logout"/>
+	</LinearLayout>
+</RelativeLayout>

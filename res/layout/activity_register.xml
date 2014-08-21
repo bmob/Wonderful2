@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <com.markupartist.android.widget.ActionBar
+        android:id="@+id/actionbar_register"
+        style="@style/ActionBar" >
+    </com.markupartist.android.widget.ActionBar>
+
+    <TextView
+        android:id="@+id/login_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar_register"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_login_tab"
+        android:gravity="center"
+        android:padding="8dip"
+        android:text="登录"
+        android:textColor="@color/second_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/register_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/login_menu"
+        android:layout_toRightOf="@id/login_menu"
+        android:gravity="center"
+        android:padding="8dip"
+        android:text="注册"
+        android:textColor="@color/second_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/reset_password_menu"
+        style="@style/TextTheme.tipstheme_second"
+        android:layout_alignTop="@id/login_menu"
+        android:layout_toRightOf="@id/register_menu"
+        android:gravity="center"
+        android:padding="8dip"
+        android:text="找回密码" />
+
+    <View
+        android:id="@+id/diviver"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/register_menu"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/theme_color" />
+
+    <com.xgr.wonderful.view.DeletableEditText
+        android:id="@+id/user_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip"
+        android:layout_alignLeft="@id/diviver"
+        android:layout_alignRight="@id/diviver"
+        android:layout_below="@id/diviver"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_edittext_account"
+        android:drawableLeft="@drawable/user_account"
+        android:drawableRight="@drawable/user_delete"
+        android:ems="10"
+        android:hint="请输入帐号名"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </com.xgr.wonderful.view.DeletableEditText>
+
+    <com.xgr.wonderful.view.DeletableEditText
+        android:id="@+id/user_password_input"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip"
+        android:layout_alignLeft="@id/user_name_input"
+        android:layout_alignRight="@id/user_name_input"
+        android:layout_below="@+id/user_name_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_edittext_account"
+        android:drawableLeft="@drawable/user_password"
+        android:drawableRight="@drawable/user_delete"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip"
+        android:singleLine="true" />
+
+    <com.xgr.wonderful.view.DeletableEditText
+        android:id="@+id/user_email_input"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip"
+        android:layout_alignLeft="@id/user_name_input"
+        android:layout_alignRight="@id/user_name_input"
+        android:layout_below="@+id/user_password_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_edittext_account"
+        android:drawableLeft="@drawable/user_name"
+        android:drawableRight="@drawable/user_delete"
+        android:ems="10"
+        android:hint="请输入邮箱地址"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_email_input"
+        android:layout_alignRight="@+id/user_email_input"
+        android:layout_below="@+id/user_email_input"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_logout"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+        android:id="@+id/sm_progressbar"
+        style="@style/GPlusProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/register"
+        android:layout_alignRight="@id/register"
+        android:layout_below="@id/register"
+        android:layout_marginTop="-9dp"
+        android:indeterminate="true"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:visibility="gone" />
+
+</RelativeLayout>

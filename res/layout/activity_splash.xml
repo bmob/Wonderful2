@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_zero_margin"
+    android:paddingLeft="@dimen/activity_zero_margin"
+    android:paddingRight="@dimen/activity_zero_margin"
+    android:paddingTop="@dimen/activity_zero_margin"
+    tools:context=".SplashActivity"
+    android:background="@color/theme_color" >
+	<TextView 
+	    android:id="@+id/logo_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:text="Wonderful"
+	    android:textColor="#FFFFFF"
+	    android:textSize="36sp"
+	    android:drawableTop="@drawable/ic_launcher"
+	    android:drawablePadding="8dp"
+	    />
+	<TextView 
+	    android:id="@+id/logo_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="8dip"
+	    android:text="Bmob,让移动开发更简单!"
+	    android:textColor="#FFFFFF"
+	    android:textSize="16sp"
+	    />
+</RelativeLayout>

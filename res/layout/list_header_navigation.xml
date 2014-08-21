@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:id="@+id/header_content"
+    >
+    <LinearLayout 
+        android:id="@+id/bg_navi_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <View
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/theme_color"
+            />
+         <View
+             android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+            />
+    </LinearLayout>
+
+    <ImageView 
+        android:id="@+id/user_logo_navi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/user_icon_default"
+        android:scaleType="centerInside"
+        android:contentDescription="@null"
+        />
+	<TextView
+	    android:id="@+id/user_name_navi"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="16dp"
+	    android:textSize="18sp"
+	    android:textColor="#FFFFFF"
+	    android:text="墙友"
+	    />
+
+    
+</RelativeLayout>

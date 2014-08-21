@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+    <item android:drawable="@drawable/progress_one" android:duration="200"></item>
+<item android:drawable="@drawable/progress_two" android:duration="200"></item>
+<item android:drawable="@drawable/progress_three" android:duration="200"></item>
+<item android:drawable="@drawable/progress_four" android:duration="200"></item>
+</animation-list>
