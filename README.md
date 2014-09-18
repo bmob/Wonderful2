@@ -35,7 +35,7 @@ ActionBar：自定义标题栏。
 
 三、提示
 
-1、此源码需要去Bmob官网（http://www.bmob.cn）申请key，才能使用哦，原来的key已经失效。
+1、此源码需要去Bmob官网（ http://www.bmob.cn/ ）申请key，才能使用哦，原来的key已经失效。
 
 2、猿圈媛圈App开发团队源码奉献，交流群号：338626944。
 
